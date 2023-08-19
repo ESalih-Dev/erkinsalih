@@ -1,0 +1,9 @@
+node_modules
+
+.DS_Store
+/.cache
+/.wrangler
+/build
+/public/build
+.dev.vars
+.eslint

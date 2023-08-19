@@ -1,0 +1,17 @@
+name = "cf-worker"
+
+workers_dev = true
+main = "./build/index.js"
+# https://developers.cloudflare.com/workers/platform/compatibility-dates
+compatibility_date = "2023-04-20"
+routes = [
+	{ pattern = "erkinsalih.com", custom_domain = true }
+]
+
+[vars]
+
+[site]
+  bucket = "./public"
+
+[build]
+  command = "npm run build"
