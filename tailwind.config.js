@@ -7,7 +7,10 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
       },
     },
     extend: {
@@ -60,10 +63,31 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
+        unblur: {
+          from: { filter: "blur(8px)" },
+          to: { filter: "blur(0)" },
+        },
+        "fade-in": {
+          from: {
+            opacity: 0.2,
+            top: "10px",
+          },
+          to: {
+            opacity: 1,
+            top: 0,
+          },
+        },
+        "spin-once": {
+          from: { transform: "rotate(0)" },
+          to: { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        unblur: "unblur 0.4s ease-in forwards 1",
+        "fade-up": "fade-in 0.4s ease-in forwards 1",
+        "spin-once": "spin-once 0.4s linear forwards 1",
       },
     },
   },

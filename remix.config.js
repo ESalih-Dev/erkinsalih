@@ -15,6 +15,7 @@ export default {
   // assetsBuildDirectory: "public/build",
   // serverBuildPath: "build/index.js",
   // publicPath: "/build/",
+  watchPaths: ["/tailwind.config.js"],
   tailwind: true,
   postcss: true,
   future: {
