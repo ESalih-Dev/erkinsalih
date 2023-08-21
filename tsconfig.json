@@ -14,6 +14,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
+      "@components/*": ["./app/components/ui/*"],
       "~/*": ["./app/*"]
     },
     // Remix takes care of building everything in `remix build`.
