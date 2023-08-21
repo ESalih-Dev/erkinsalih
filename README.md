@@ -21,4 +21,3 @@
 ---
 
 - [Cloudinary](https://cloudinary.com/) for serving media
-  import {v2 as cloudinary} from 'cloudinary';
