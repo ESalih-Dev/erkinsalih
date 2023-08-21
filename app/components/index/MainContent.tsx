@@ -32,7 +32,9 @@ const RandomFactGenerator = () => {
 
     return (
         <Card className="animate-fade-up p-4">
-            <CardDescription className="mb-4">Random facts</CardDescription>
+            <CardDescription className="mb-4">
+                A random fact about me...
+            </CardDescription>
             <div className="flex flex-row items-center">
                 <Button
                     className="p-2"

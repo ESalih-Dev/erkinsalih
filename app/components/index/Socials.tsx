@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react'
+import { ReactNode, useState } from 'react'
 import { Link } from '@remix-run/react'
 import { Button } from '@components/button'
 import { Separator } from '@components/separator'
@@ -84,7 +84,13 @@ const SocialButton = ({ Icon, colour, url }: Omit<Social, 'friendlyName'>) => {
             onMouseEnter={flipHoveringState}
             onMouseLeave={flipHoveringState}
         >
-            {url ? <Link to={url}>{iconComponent}</Link> : iconComponent}
+            {url ? (
+                <Link to={url} target="_blank" rel="noopener noreferrer">
+                    {iconComponent}
+                </Link>
+            ) : (
+                iconComponent
+            )}
         </Button>
     )
 }
