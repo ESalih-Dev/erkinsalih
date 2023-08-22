@@ -145,7 +145,10 @@ export const Socials = () => (
     <div className="flex justify-center">
         {SOCIALS.map((social) => (
             <>
-                <TooltipWrapper text={social.friendlyName}>
+                <TooltipWrapper
+                    key={social.friendlyName}
+                    text={social.friendlyName}
+                >
                     <SocialButton {...social} />
                 </TooltipWrapper>
                 <Separator className="mx-8 h-auto" orientation="vertical" />
@@ -153,7 +156,7 @@ export const Socials = () => (
         ))}
         <EmailPopover email="erkin_salih@hotmail.com">
             <TooltipWrapper text="Email">
-                <SocialButton Icon={MailIcon} colour="#1DA1F2" />
+                <SocialButton Icon={MailIcon} colour="#FFC629" />
             </TooltipWrapper>
         </EmailPopover>
     </div>

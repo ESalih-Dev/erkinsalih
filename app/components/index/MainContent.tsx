@@ -59,7 +59,7 @@ export const MainContent = () => (
     <div className="flex flex-col md:flex-row">
         <div className="my-20">
             <div className="relative mb-4 animate-fade-up text-xl font-light">
-                hi, i'm kin 🙂
+                Hi, i'm kin 🙂
             </div>
             <div className="relative mb-2 animate-fade-up text-4xl font-bold tracking-wider lg:whitespace-nowrap">
                 i like to travel. i also like to eat.
