@@ -37,7 +37,7 @@ const RandomFactGenerator = () => {
             </CardDescription>
             <div className="flex flex-row items-center">
                 <Button
-                    className="p-2"
+                    className="self-start p-2"
                     variant="outline"
                     size="icon"
                     onClick={flipSpinningState}
