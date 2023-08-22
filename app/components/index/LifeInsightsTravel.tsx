@@ -97,31 +97,29 @@ const VisitChecker = ({ countries }: Required<Props>) => {
 }
 
 export const LifeInsightsTravel = ({ countries }: Props) => (
-    <>
-        <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-12 md:flex-row md:space-x-12 md:space-y-0">
-            <img
-                className="h-min w-full rounded-md md:w-2/5"
-                src={SKIING_IMG}
-                alt="Kin (left), Tom (right) skiing selfie in Switzerland"
-            />
-            <div className="flex w-full flex-col justify-between space-y-4 md:w-1/2">
-                <div className="whitespace-pre-wrap text-xl leading-9 text-muted-foreground">
-                    Since graduating from university I've always been keen to
-                    travel and see as much of the world as possible. It started
-                    with a 5 week trip to Japan and since then I've seen some
-                    incredible sights, climbed mountains, skied slopes, tried
-                    different types of food I never even knew existed and made
-                    lifelong friends with some incredible people that I've met
-                    with in different countries across the world.
-                    {'\n\n'}
-                    Next on my list of places to go is either South America or
-                    Asia. I'm learning Spanish with the goal of making it easier
-                    to travel the world. I can't imagine a life being stuck in
-                    one place (for the time being at least). Becoming a full
-                    digital nomad with no permanent home is the ultimate goal 🚀
-                </div>
-                {countries && <VisitChecker countries={countries} />}
+    <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-12 md:flex-row md:space-x-12 md:space-y-0">
+        <img
+            className="h-min w-full rounded-md md:w-2/5"
+            src={SKIING_IMG}
+            alt="Kin (left), Tom (right) skiing selfie in Switzerland"
+        />
+        <div className="flex w-full flex-col justify-between space-y-4 md:w-1/2">
+            <div className="whitespace-pre-wrap text-xl leading-9 text-muted-foreground">
+                Since graduating from university I've always been keen to travel
+                and see as much of the world as possible. It started with a 5
+                week trip to Japan and since then I've seen some incredible
+                sights, climbed mountains, skied slopes, tried different types
+                of food I never even knew existed and made lifelong friends with
+                some incredible people that I've met with in different countries
+                across the world.
+                {'\n\n'}
+                Next on my list of places to go is either South America or Asia.
+                I'm learning Spanish with the goal of making it easier to travel
+                the world. I can't imagine a life being stuck in one place (for
+                the time being at least). Becoming a full digital nomad with no
+                permanent home is the ultimate goal 🚀
             </div>
-        </Card>
-    </>
+            {countries && <VisitChecker countries={countries} />}
+        </div>
+    </Card>
 )
