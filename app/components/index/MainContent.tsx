@@ -2,16 +2,7 @@ import { RefreshCcw } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { Button } from '@components/button'
 import { Card, CardDescription } from '@components/card'
-
-const FACTS = [
-    'I have a black belt in martial arts',
-    "I'm currently learning Spanish",
-    'The first time I had a bloody mary I almost vomitted',
-    'I think Italian food is extremely overrated',
-    'My favourite colour is orange - I love it so much that my car is orange',
-    '99% of the time my farts are odourless 🙈',
-    'The first time I saw a scorpion was in my kitchen in Mexico',
-]
+import { FACTS } from '~/components/index/Facts'
 
 const getFactNumber = (prev?: number): number => {
     const getPosition = () => Math.floor(Math.random() * FACTS.length)
@@ -72,7 +63,7 @@ export const MainContent = () => (
         <div className="animate-unblur md:ml-40">
             <img
                 className="rounded-3xl"
-                src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_700/yod23rsojjmnbz75vkir"
+                src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_1000/yod23rsojjmnbz75vkir"
                 alt="Me in front of a mirror"
             />
         </div>

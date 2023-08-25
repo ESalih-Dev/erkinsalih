@@ -1,5 +1,6 @@
 import { json, type V2_MetaFunction } from '@remix-run/cloudflare'
 import { useLoaderData } from '@remix-run/react'
+import { LifeInsightsCar } from '~/components/index/LifeInsightsCar'
 import { LifeInsightsFood } from '~/components/index/LifeInsightsFood'
 import { LifeInsightsTravel } from '~/components/index/LifeInsightsTravel'
 import { LifeQuote } from '~/components/index/LifeQuote'
@@ -26,6 +27,7 @@ const Index = () => {
             <LifeQuote />
             <LifeInsightsTravel countries={countries} />
             <LifeInsightsFood />
+            <LifeInsightsCar />
         </div>
     )
 }

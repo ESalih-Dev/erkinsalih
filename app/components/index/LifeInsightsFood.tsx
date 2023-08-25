@@ -50,6 +50,8 @@ export const LifeInsightsFood = () => {
             </div>
             <img
                 className="h-min w-full rounded-md md:w-2/5"
+                width={448}
+                height={560}
                 src={FOOD_IMG}
                 alt="Lobster brioche from Homer Lobster - Marais, Paris"
             />
