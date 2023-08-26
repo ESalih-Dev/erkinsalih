@@ -1,5 +1,5 @@
 export const FACTS = [
-    'I have a black belt in martial arts',
+    'I have a black belt in Choi Kwang Do',
     "I'm currently learning Spanish",
     'The first time I had a bloody mary I almost vomitted',
     'I think Italian food is extremely overrated',

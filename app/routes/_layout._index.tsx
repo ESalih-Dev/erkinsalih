@@ -1,5 +1,6 @@
 import { json, type V2_MetaFunction } from '@remix-run/cloudflare'
 import { useLoaderData } from '@remix-run/react'
+import { useState } from 'react'
 import { LifeInsightsCar } from '~/components/index/LifeInsightsCar'
 import { LifeInsightsFood } from '~/components/index/LifeInsightsFood'
 import { LifeInsightsTravel } from '~/components/index/LifeInsightsTravel'
@@ -20,6 +21,8 @@ export const loader = async () => {
 
 const Index = () => {
     const { countries } = useLoaderData<typeof loader>()
+    const [v, setV] = useState(0)
+    console.log(v)
     return (
         <div className="container justify-center space-y-20 md:my-20">
             <MainContent />

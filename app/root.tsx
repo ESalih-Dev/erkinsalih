@@ -9,7 +9,6 @@ import {
     ScrollRestoration,
 } from '@remix-run/react'
 import styles from './globals.css'
-import { Toolbar } from '~/components/root/Toolbar'
 
 export const links: LinksFunction = () => [
     { rel: 'stylesheet', href: styles },
@@ -28,33 +27,30 @@ export const links: LinksFunction = () => [
         rel: 'icon',
         type: 'image/png',
         sizes: '16x16',
-        href: '/favicon-32x32.png',
+        href: '/favicon-16x16.png',
     },
     { rel: 'manifest', href: '/site.webmanifest' },
     ...(cssBundleHref ? [{ rel: 'stylesheet', href: cssBundleHref }] : []),
 ]
 
-const App = () => {
-    return (
-        <html lang="en" className="dark">
-            <head>
-                <meta charSet="utf-8" />
-                <meta
-                    name="viewport"
-                    content="width=device-width,initial-scale=1"
-                />
-                <Meta />
-                <Links />
-            </head>
-            <body>
-                <Toolbar />
-                <Outlet />
-                <ScrollRestoration />
-                <Scripts />
-                <LiveReload />
-            </body>
-        </html>
-    )
-}
+const App = () => (
+    <html lang="en" className="dark">
+        <head>
+            <meta charSet="utf-8" />
+            <meta
+                name="viewport"
+                content="width=device-width,initial-scale=1"
+            />
+            <Meta />
+            <Links />
+        </head>
+        <body>
+            <Outlet />
+            <ScrollRestoration />
+            <Scripts />
+            <LiveReload />
+        </body>
+    </html>
+)
 
 export default App

@@ -78,6 +78,7 @@ const SocialButton = ({ Icon, colour, url }: Omit<Social, 'friendlyName'>) => {
 
     return (
         <Button
+            key={url}
             asChild={!!url}
             variant="ghost"
             className="h-20 w-20"
@@ -145,10 +146,7 @@ export const Socials = () => (
     <div className="flex justify-center">
         {SOCIALS.map((social) => (
             <>
-                <TooltipWrapper
-                    key={social.friendlyName}
-                    text={social.friendlyName}
-                >
+                <TooltipWrapper text={social.friendlyName}>
                     <SocialButton {...social} />
                 </TooltipWrapper>
                 <Separator className="mx-8 h-auto" orientation="vertical" />
