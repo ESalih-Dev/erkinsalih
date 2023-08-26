@@ -11,6 +11,7 @@ import {
 } from '@remix-run/react'
 import styles from './globals.css'
 import { PageToggle } from '~/components/PageToggle'
+import { Footer } from '~/components/Footer'
 
 export const meta: V2_MetaFunction = () => [
     { title: "It's Kin 🥶" },
@@ -51,9 +52,10 @@ const App = () => (
             <Meta />
             <Links />
         </head>
-        <body className="flex justify-center">
-            <Outlet />
+        <body>
             <PageToggle />
+            <Outlet />
+            <Footer />
             <PrefetchPageLinks page="/experience" />
             <ScrollRestoration />
             <Scripts />
