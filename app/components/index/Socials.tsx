@@ -149,7 +149,10 @@ export const Socials = () => (
                 <TooltipWrapper text={social.friendlyName}>
                     <SocialButton {...social} />
                 </TooltipWrapper>
-                <Separator className="mx-8 h-auto" orientation="vertical" />
+                <Separator
+                    className="mx-4 h-auto md:mx-8"
+                    orientation="vertical"
+                />
             </>
         ))}
         <EmailPopover email="erkin_salih@hotmail.com">

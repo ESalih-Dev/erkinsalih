@@ -47,8 +47,8 @@ const RandomFactGenerator = () => {
 }
 
 export const MainContent = () => (
-    <div className="flex flex-col md:flex-row">
-        <div className="my-20">
+    <div className="flex flex-col justify-between md:flex-row">
+        <div className="mb-20 md:my-20 md:w-1/2">
             <div className="relative mb-4 animate-fade-up text-xl font-light">
                 Hi, i'm kin 🙂
             </div>
@@ -60,9 +60,9 @@ export const MainContent = () => (
             </div>
             <RandomFactGenerator />
         </div>
-        <div className="animate-unblur md:ml-40">
+        <div className="md:w-2/5">
             <img
-                className="rounded-3xl"
+                className="animate-unblur rounded-3xl"
                 src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_1000/yod23rsojjmnbz75vkir"
                 alt="Me in front of a mirror"
             />

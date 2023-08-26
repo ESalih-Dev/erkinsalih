@@ -1,14 +1,21 @@
-import type { LinksFunction } from '@remix-run/cloudflare'
+import type { LinksFunction, V2_MetaFunction } from '@remix-run/cloudflare'
 import { cssBundleHref } from '@remix-run/css-bundle'
 import {
     Links,
     LiveReload,
     Meta,
     Outlet,
+    PrefetchPageLinks,
     Scripts,
     ScrollRestoration,
 } from '@remix-run/react'
 import styles from './globals.css'
+import { PageToggle } from '~/components/PageToggle'
+
+export const meta: V2_MetaFunction = () => [
+    { title: "It's Kin 🥶" },
+    { name: 'description', content: 'Welcome to my website!' },
+]
 
 export const links: LinksFunction = () => [
     { rel: 'stylesheet', href: styles },
@@ -44,8 +51,10 @@ const App = () => (
             <Meta />
             <Links />
         </head>
-        <body>
+        <body className="flex justify-center">
             <Outlet />
+            <PageToggle />
+            <PrefetchPageLinks page="/experience" />
             <ScrollRestoration />
             <Scripts />
             <LiveReload />

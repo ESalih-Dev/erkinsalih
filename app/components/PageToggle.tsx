@@ -11,7 +11,7 @@ export const PageToggle = () => {
     return (
         <div
             className={
-                'fixed left-1/2 top-0 flex translate-x-[-50%] flex-row justify-center space-x-4 rounded-b-lg border bg-slate-950 px-4 py-2 hover:bg-slate-900'
+                'fixed top-0 m-auto flex justify-center space-x-4 rounded-b-xl border-b-2 border-l-2 border-r-2 bg-slate-950 px-4 py-2 text-center hover:bg-slate-900'
             }
             onMouseEnter={() => setHovering(true)}
             onMouseLeave={() => setHovering(false)}
