@@ -1,8 +1,10 @@
 const content = `
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://erkinsalih.com</loc>
-        <lastmod>2023-08-25</lastmod>
+        <loc>https://erkinsalih.com/</loc>
+    </url>
+    <url>
+        <loc>https://erkinsalih.com/experience</loc>
     </url>
 </urlset>
 `
