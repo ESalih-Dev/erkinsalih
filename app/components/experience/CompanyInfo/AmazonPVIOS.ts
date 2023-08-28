@@ -8,7 +8,7 @@ export const AmazonPVIOS: CompanyInfo = {
     companySize: '10,0001+',
     role: 'Full Stack Engineer - Placement',
     tenure: 6,
-    description: '',
+    tenureDates: 'Apr 2018 - Sep 2018',
     linkedInUrl: 'https://www.linkedin.com/company/amazon/',
     technologies: ['Swift', 'Objective-C', 'React']
 }

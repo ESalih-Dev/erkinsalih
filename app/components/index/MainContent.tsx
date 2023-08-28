@@ -40,7 +40,9 @@ const RandomFactGenerator = () => {
                         onAnimationEnd={flipSpinningState}
                     />
                 </Button>
-                <div className="ml-4 text-xl">{FACTS[factNumber]}</div>
+                <div className="ml-4 text-xl leading-relaxed">
+                    {FACTS[factNumber]}
+                </div>
             </div>
         </Card>
     )

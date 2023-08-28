@@ -8,7 +8,7 @@ export const AmazonPVWeb: CompanyInfo = {
     companySize: '10,0001+',
     role: 'Full Stack Engineer',
     tenure: 23,
-    description: '',
+    tenureDates: 'Oct 2019 - Sep 2021',
     linkedInUrl: 'https://www.linkedin.com/company/amazon/',
     technologies: ['Scala', 'Java', 'TypeScript', 'JavaScript', 'React']
 }

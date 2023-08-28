@@ -7,7 +7,7 @@ export const MindfulChef: CompanyInfo = {
     companySize: '51 - 200',
     role: 'Front End Engineer',
     tenure: 6,
-    description: '',
+    tenureDates: 'Oct 2021 - Mar 2022',
     linkedInUrl: 'https://www.linkedin.com/company/mindful-chef/',
     technologies: ['TypeScript', 'JavaScript', 'NextJS', 'Redux']
 }

@@ -8,7 +8,7 @@ export interface CompanyInfo {
     companySize: CompanySize
     role: string
     tenure: number // In months
-    description: string
+    tenureDates: string
     linkedInUrl: string
     technologies: Technology[]
 }

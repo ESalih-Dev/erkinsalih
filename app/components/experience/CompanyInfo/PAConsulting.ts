@@ -7,7 +7,7 @@ export const PAConsulting: CompanyInfo = {
     companySize: '1001 - 5000',
     role: 'Backend Engineer - Internship',
     tenure: 3,
-    description: '',
+    tenureDates: 'Jul 2017 - Sep 2017',
     linkedInUrl: 'https://www.linkedin.com/company/pa-consulting/',
     technologies: ['Python'],
 }

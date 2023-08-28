@@ -7,7 +7,7 @@ export const Coral: CompanyInfo = {
     companySize: '1 - 10',
     role: 'Founding Front End Engineer',
     tenure: 15,
-    description: '',
+    tenureDates: 'Apr 2022 - Jun 2023',
     linkedInUrl: 'https://www.linkedin.com/company/hicoral/',
     technologies: ['TypeScript', 'React', 'Remix', 'MUI']
 }

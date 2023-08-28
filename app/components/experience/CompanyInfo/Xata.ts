@@ -7,7 +7,7 @@ export const Xata: CompanyInfo = {
     companySize: '11 - 50',
     role: 'Senior Front End Engineer',
     tenure: 2,
-    description: '',
+    tenureDates: 'Jul 2023 - Aug 2023',
     linkedInUrl: 'https://www.linkedin.com/company/xataio/',
     technologies: ['TypeScript', 'React', 'NextJS', 'ChakraUI'],
 }
