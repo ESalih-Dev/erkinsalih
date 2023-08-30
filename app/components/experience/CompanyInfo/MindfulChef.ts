@@ -1,6 +1,7 @@
 import { CompanyInfo } from "~/components/experience/CompanyInfo/CompanyInfo";
 
 export const MindfulChef: CompanyInfo = {
+    id: 'MindfulChef',
     logoUrl: 'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/qw2lrxwsjlhtfsbjscdo',
     companyName: 'Mindful Chef',
     companyUrl: 'https://www.mindfulchef.com/',

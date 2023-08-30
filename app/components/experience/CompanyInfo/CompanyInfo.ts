@@ -1,6 +1,7 @@
-import { CompanySize, Technology } from "~/components/experience/ExperienceUtils"
+import { CompanySize, JobID, Technology } from "~/components/experience/ExperienceUtils"
 
 export interface CompanyInfo {
+    id: JobID
     logoUrl: string
     companyName: string
     companyUrl: string

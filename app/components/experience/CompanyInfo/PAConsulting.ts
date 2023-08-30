@@ -1,6 +1,7 @@
 import { CompanyInfo } from "~/components/experience/CompanyInfo/CompanyInfo";
 
 export const PAConsulting: CompanyInfo = {
+    id: 'PAConsulting',
     logoUrl: 'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/g7kehgw0juzhhw2rcwtt',
     companyName: 'PA Consulting',
     companyUrl: 'https://www.paconsulting.com/',

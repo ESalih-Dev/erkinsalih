@@ -1,6 +1,7 @@
 import { CompanyInfo } from "~/components/experience/CompanyInfo/CompanyInfo";
 
 export const Coral: CompanyInfo = {
+    id: 'Coral',
     logoUrl: 'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/awdfexkiemnj0aixgbyi',
     companyName: 'Coral',
     companyUrl: 'https://hicoral.com/',

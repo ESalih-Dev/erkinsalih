@@ -23,7 +23,6 @@ export const CompanyCard = ({
     team,
     companySize,
     role,
-    description,
     linkedInUrl,
     technologies,
 }: CompanyInfo) => (
@@ -74,7 +73,7 @@ export const CompanyCard = ({
             </span>
             <div className="flex flex-row space-x-2">
                 {technologies.map((tech) => (
-                    <TechnologyBadge technology={tech} />
+                    <TechnologyBadge key={tech} technology={tech} />
                 ))}
             </div>
         </CardContent>

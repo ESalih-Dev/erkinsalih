@@ -6,20 +6,22 @@ import { Coral } from '~/components/experience/CompanyInfo/Coral'
 import { MindfulChef } from '~/components/experience/CompanyInfo/MindfulChef'
 import { PAConsulting } from '~/components/experience/CompanyInfo/PAConsulting'
 import { Xata } from '~/components/experience/CompanyInfo/Xata'
+import { JobID } from '~/components/experience/ExperienceUtils'
 
-const EXPERIENCE: CompanyInfo[] = [
+// Job list starts from most-recent
+export const EXPERIENCE: Record<JobID, CompanyInfo> = {
     Xata,
     Coral,
     MindfulChef,
     AmazonPVWeb,
     AmazonPVIOS,
     PAConsulting,
-]
+}
 
 export const CompanyExperience = () => (
     <div className="flex flex-row space-x-8 overflow-auto py-16">
-        {EXPERIENCE.map((exp) => (
-            <CompanyCard key={exp.companyName} {...exp} />
+        {Object.values(EXPERIENCE).map((exp) => (
+            <CompanyCard key={exp.id} {...exp} />
         ))}
     </div>
 )

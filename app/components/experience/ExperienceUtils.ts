@@ -1,3 +1,5 @@
+export type JobID = 'PAConsulting' | 'AmazonPVIOS' | 'AmazonPVWeb' | 'MindfulChef' | 'Coral' | 'Xata'
+
 export type CompanySize =
     | '1 - 10'
     | '11 - 50'

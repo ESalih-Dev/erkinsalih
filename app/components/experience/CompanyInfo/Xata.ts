@@ -1,6 +1,7 @@
 import { CompanyInfo } from "~/components/experience/CompanyInfo/CompanyInfo";
 
 export const Xata: CompanyInfo = {
+    id: 'Xata',
     logoUrl: 'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/tnw9wcrzt9r7wrpo8b4t',
     companyName: 'Xata.io',
     companyUrl: 'https://xata.io/',
