@@ -16,17 +16,17 @@ import {
     TooltipTrigger,
 } from '@components/tooltip'
 
-export const CompanyCard = ({
+export const ExperienceInfo = ({
     logoUrl,
     companyName,
     companyUrl,
     team,
     companySize,
-    role,
+    tenureDates,
     linkedInUrl,
     technologies,
-}: CompanyInfo) => (
-    <Card className="min-w-[400px] max-w-[400px]">
+}: Omit<CompanyInfo, 'role' | 'description'>) => (
+    <Card className="h-min md:w-2/5">
         <CardHeader>
             <CardTitle className="flex flex-row justify-between">
                 <div className="flex flex-row space-x-2">
@@ -69,9 +69,9 @@ export const CompanyCard = ({
         </CardHeader>
         <CardContent className="flex flex-col space-y-4">
             <span className="text-lg font-extrabold text-card-foreground">
-                {role}
+                {tenureDates}
             </span>
-            <div className="flex flex-row space-x-2">
+            <div className="flex flex-row flex-wrap gap-2">
                 {technologies.map((tech) => (
                     <TechnologyBadge key={tech} technology={tech} />
                 ))}

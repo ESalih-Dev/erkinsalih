@@ -17,7 +17,7 @@ const Index = () => {
     const { countries } = useLoaderData<typeof loader>()
 
     return (
-        <div className="container my-20 space-y-20">
+        <div className="my-20 space-y-20">
             <MainContent />
             <Socials />
             <LifeQuote />

@@ -1,14 +1,15 @@
 import { Circle } from 'lucide-react'
-import { EXPERIENCE } from '~/components/experience/CompanyExperience'
+import { EXPERIENCE } from '~/routes/experience'
 import { JobID } from '~/components/experience/ExperienceUtils'
 
-const CircleStyles = 'min-w-fit hover:cursor-pointer hover:stroke-violet-600'
-const LineStyles = 'h-1 rounded-lg'
+const CircleStyles =
+    'min-w-fit hover:cursor-pointer transition-colors duration-300 hover:stroke-violet-600 hover:duration-500'
+const LineStyles = 'h-1 rounded-lg transition-colors duration-300'
 
 interface Props {
     setHovering: (job: JobID | undefined) => void
     experience?: JobID
-    setExperience: (job: JobID) => void
+    setExperience: (job: JobID | undefined) => void
 }
 
 export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
@@ -18,7 +19,7 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
     const experiences = [...jobs].reverse()
     return (
         <div className="flex flex-row items-center">
-            {experiences.map((exp, i) => {
+            {experiences.map((exp) => {
                 const width = Math.round((exp.tenure / totalTenure) * 100)
                 return (
                     <>
@@ -28,7 +29,11 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
                                     ? 'stroke-violet-800'
                                     : 'stroke-white'
                             }`}
-                            onClick={() => setExperience(exp.id)}
+                            onClick={() =>
+                                setExperience(
+                                    experience === exp.id ? undefined : exp.id
+                                )
+                            }
                             onMouseEnter={() => setHovering(exp.id)}
                             onMouseLeave={() => setHovering(undefined)}
                         />

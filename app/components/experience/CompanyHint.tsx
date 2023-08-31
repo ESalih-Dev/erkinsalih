@@ -1,7 +1,7 @@
-import useTransition from 'react-transition-state'
-import { EXPERIENCE } from '~/components/experience/CompanyExperience'
-import { JobID } from '~/components/experience/ExperienceUtils'
 import { useEffect, useRef } from 'react'
+import useTransition from 'react-transition-state'
+import { JobID } from '~/components/experience/ExperienceUtils'
+import { EXPERIENCE } from '~/routes/experience'
 
 const prettifyTenure = (tenure: number): string => {
     if (tenure < 12) return `${tenure} ${tenure === 1 ? 'month' : 'months'}`
