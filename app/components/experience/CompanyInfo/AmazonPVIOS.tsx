@@ -1,4 +1,7 @@
-import { CompanyInfo } from '~/components/experience/CompanyInfo/CompanyInfo'
+import {
+    CompanyInfo,
+    DataPoint,
+} from '~/components/experience/CompanyInfo/CompanyInfo'
 
 const description = (
     <>
@@ -21,6 +24,29 @@ const description = (
     </>
 )
 
+const chartData: DataPoint[] = [
+    {
+        name: 'Code Quality',
+        value: 8,
+    },
+    {
+        name: 'Engineer Skill',
+        value: 10,
+    },
+    {
+        name: 'Work/Life balance',
+        value: 9,
+    },
+    {
+        name: 'Freedom',
+        value: 5,
+    },
+    {
+        name: 'Happiness',
+        value: 7,
+    },
+]
+
 export const AmazonPVIOS: CompanyInfo = {
     id: 'AmazonPVIOS',
     logoUrl:
@@ -35,4 +61,5 @@ export const AmazonPVIOS: CompanyInfo = {
     linkedInUrl: 'https://www.linkedin.com/company/amazon/',
     technologies: ['Swift', 'Objective-C', 'React'],
     description,
+    chartData,
 }

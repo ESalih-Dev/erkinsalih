@@ -56,6 +56,7 @@ const App = () => (
             <PageToggle />
             <Outlet />
             <Footer />
+            <PrefetchPageLinks page="/" />
             <PrefetchPageLinks page="/experience" />
             <ScrollRestoration />
             <Scripts />

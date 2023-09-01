@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { CompanyExperience } from '~/components/experience/CompanyExperience'
 import { CompanyHint } from '~/components/experience/CompanyHint'
 import { JobID } from '~/components/experience/ExperienceUtils'
-import { PageInProgressAlert } from '~/components/experience/PageInProgressAlert'
 import { Timeline } from '~/components/experience/Timeline'
 import { AmazonPVIOS } from '~/components/experience/CompanyInfo/AmazonPVIOS'
 import { AmazonPVWeb } from '~/components/experience/CompanyInfo/AmazonPVWeb'
@@ -28,7 +27,6 @@ const Experience = () => {
 
     return (
         <div className="md:my-20">
-            <PageInProgressAlert />
             <div
                 className={`pb-8 font-bold tracking-wider transition-all duration-1000 ease-in-out ${
                     experience

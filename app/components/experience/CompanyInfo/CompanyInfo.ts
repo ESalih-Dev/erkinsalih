@@ -1,6 +1,11 @@
 import { ReactNode } from "react"
 import { CompanySize, JobID, Technology } from "~/components/experience/ExperienceUtils"
 
+export type DataPoint = { 
+    name: 'Code Quality' | 'Engineer Skill' | 'Work/Life balance' | 'Freedom' |  'Happiness'
+    value: number
+}
+
 export interface CompanyInfo {
     id: JobID
     logoUrl: string
@@ -14,4 +19,5 @@ export interface CompanyInfo {
     linkedInUrl: string
     description: ReactNode
     technologies: Technology[]
+    chartData?: DataPoint[]
 }

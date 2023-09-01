@@ -1,4 +1,7 @@
-import { CompanyInfo } from '~/components/experience/CompanyInfo/CompanyInfo'
+import {
+    CompanyInfo,
+    DataPoint,
+} from '~/components/experience/CompanyInfo/CompanyInfo'
 
 const description = (
     <>
@@ -25,6 +28,29 @@ const description = (
     </>
 )
 
+const chartData: DataPoint[] = [
+    {
+        name: 'Code Quality',
+        value: 8,
+    },
+    {
+        name: 'Engineer Skill',
+        value: 9,
+    },
+    {
+        name: 'Work/Life balance',
+        value: 8,
+    },
+    {
+        name: 'Freedom',
+        value: 9,
+    },
+    {
+        name: 'Happiness',
+        value: 9,
+    },
+]
+
 export const Coral: CompanyInfo = {
     id: 'Coral',
     logoUrl:
@@ -38,4 +64,5 @@ export const Coral: CompanyInfo = {
     linkedInUrl: 'https://www.linkedin.com/company/hicoral/',
     technologies: ['TypeScript', 'React', 'Remix', 'MUI'],
     description,
+    chartData,
 }

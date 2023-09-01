@@ -7,11 +7,11 @@ interface Props {
 }
 
 export const ExperienceDescription = ({ role, description }: Props) => (
-    <Card className="md:w-3/5">
+    <Card>
         <CardHeader>
             <CardTitle>{role}</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-3 whitespace-pre-wrap text-slate-300">
+        <CardContent className="space-y-4 whitespace-pre-wrap text-slate-300">
             {description}
         </CardContent>
     </Card>

@@ -26,7 +26,7 @@ export const ExperienceInfo = ({
     linkedInUrl,
     technologies,
 }: Omit<CompanyInfo, 'role' | 'description'>) => (
-    <Card className="h-min md:w-2/5">
+    <Card className="h-min">
         <CardHeader>
             <CardTitle className="flex flex-row justify-between">
                 <div className="flex flex-row space-x-2">

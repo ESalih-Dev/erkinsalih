@@ -4,6 +4,7 @@ import { EXPERIENCE } from '~/routes/experience'
 import { ExperienceInfo } from '~/components/experience/ExperienceInfo'
 import { ExperienceDescription } from '~/components/experience/ExperienceDescription'
 import { JobID } from '~/components/experience/ExperienceUtils'
+import { ExperienceChart } from '~/components/experience/ExperienceChart'
 interface Props {
     experience: JobID | undefined
 }
@@ -26,6 +27,7 @@ export const CompanyExperience = ({ experience }: Props) => {
             toggle(true)
         }
     }, [experience])
+
     useEffect(() => {
         if (status === 'unmounted' && experience) {
             shownExperience.current = experience
@@ -38,12 +40,19 @@ export const CompanyExperience = ({ experience }: Props) => {
         const experienceInfo =
             shownExperience.current && EXPERIENCE[shownExperience.current]
         content = experienceInfo && (
-            <div className="flex flex-col space-y-12 md:flex-row md:space-x-12 md:space-y-0">
-                <ExperienceInfo {...experienceInfo} />
-                <ExperienceDescription
-                    role={experienceInfo.role}
-                    description={experienceInfo.description}
-                />
+            <div className="flex flex-col space-y-12 lg:flex-row lg:space-x-12 lg:space-y-0">
+                <div className="lg:w-1/2">
+                    <ExperienceInfo {...experienceInfo} />
+                    {experienceInfo.chartData && (
+                        <ExperienceChart chartData={experienceInfo.chartData} />
+                    )}
+                </div>
+                <div className="lg:w-1/2">
+                    <ExperienceDescription
+                        role={experienceInfo.role}
+                        description={experienceInfo.description}
+                    />
+                </div>
             </div>
         )
     }
@@ -52,11 +61,10 @@ export const CompanyExperience = ({ experience }: Props) => {
             className={`space-y-4 transition-all duration-1000 ease-in-out ${
                 status === 'preEnter' || status === 'exiting'
                     ? 'pt-0 opacity-0'
-                    : 'pt-[10vh]'
+                    : 'lg:pt-[10vh]'
             }`}
         >
             {content}
-            {/* Graph here */}
         </div>
     )
 }
