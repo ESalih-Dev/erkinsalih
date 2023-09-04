@@ -1,10 +1,12 @@
 import { Circle } from 'lucide-react'
 import { EXPERIENCE } from '~/routes/experience'
 import { JobID } from '~/components/experience/ExperienceUtils'
+import { Separator } from '@components/separator'
+import { Button } from '@components/button'
 
 const CircleStyles =
-    'min-w-fit hover:cursor-pointer transition-colors duration-300 hover:stroke-violet-600 hover:duration-500'
-const LineStyles = 'h-1 rounded-lg transition-colors duration-300'
+    'min-w-[24px] hover:cursor-pointer transition-colors duration-300 hover:stroke-violet-600 hover:duration-500'
+const LineStyles = 'h-1 rounded-md transition-colors duration-300'
 
 interface Props {
     setHovering: (job: JobID | undefined) => void
@@ -23,28 +25,32 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
                 const width = Math.round((exp.tenure / totalTenure) * 100)
                 return (
                     <>
-                        <Circle
-                            className={`${CircleStyles} ${
-                                experience === exp.id
-                                    ? 'stroke-violet-800'
-                                    : 'stroke-white'
-                            }`}
+                        <Button
+                            className="p-0 hover:bg-transparent"
+                            variant="ghost"
                             onClick={() => {
                                 setExperience(
                                     experience === exp.id ? undefined : exp.id
                                 )
-                                setHovering(undefined)
                             }}
                             onMouseEnter={() => setHovering(exp.id)}
                             onMouseLeave={() => setHovering(undefined)}
-                        />
-                        <hr
+                        >
+                            <Circle
+                                className={`${CircleStyles} ${
+                                    experience === exp.id
+                                        ? 'stroke-violet-800'
+                                        : 'stroke-white'
+                                }`}
+                            />
+                        </Button>
+                        <Separator
                             className={`${LineStyles} ${
                                 experience === exp.id
                                     ? 'bg-violet-800'
                                     : 'bg-white'
                             }`}
-                            style={{ width: `${width}%` }}
+                            style={{ width: `calc(${width}% - 24px)` }}
                         />
                     </>
                 )

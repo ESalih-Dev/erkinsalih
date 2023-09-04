@@ -52,7 +52,7 @@ const App = () => (
             <Meta />
             <Links />
         </head>
-        <body className="container">
+        <body className="container relative min-h-screen">
             <PageToggle />
             <Outlet />
             <Footer />

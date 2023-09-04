@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { CompanyExperience } from '~/components/experience/CompanyExperience'
 import { CompanyHint } from '~/components/experience/CompanyHint'
 import { JobID } from '~/components/experience/ExperienceUtils'
@@ -10,6 +10,7 @@ import { Coral } from '~/components/experience/CompanyInfo/Coral'
 import { MindfulChef } from '~/components/experience/CompanyInfo/MindfulChef'
 import { PAConsulting } from '~/components/experience/CompanyInfo/PAConsulting'
 import { Xata } from '~/components/experience/CompanyInfo/Xata'
+import { isMobile } from '~/utils'
 
 // Job list starts from most-recent
 export const EXPERIENCE: Record<JobID, CompanyInfo> = {
@@ -25,8 +26,16 @@ const Experience = () => {
     const [hovering, setHovering] = useState<JobID | undefined>()
     const [experience, setExperience] = useState<JobID | undefined>()
 
+    useEffect(() => {
+        if (isMobile()) setTimeout(() => setExperience('Xata'), 700)
+    }, [])
+
+    useEffect(() => {
+        if (hovering) setHovering(undefined)
+    }, [experience])
+
     return (
-        <div className="my-14 md:my-20">
+        <div className="py-20">
             <div
                 className={`pb-8 font-bold tracking-wider transition-all duration-1000 ease-in-out ${
                     experience

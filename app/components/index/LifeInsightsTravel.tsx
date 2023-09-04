@@ -56,10 +56,9 @@ const VisitChecker = ({ countries }: Required<Props>) => {
                     />
                     <ScrollArea className="h-72 pt-4">
                         {filteredCountries.map((country, i) => (
-                            <>
+                            <div key={country}>
                                 <Button
                                     asChild
-                                    key={country}
                                     variant="ghost"
                                     onClick={() => handleSelect(country)}
                                     className="flex w-full flex-row justify-start px-2 py-0"
@@ -80,7 +79,7 @@ const VisitChecker = ({ countries }: Required<Props>) => {
                                 {filteredCountries.length - 1 !== i && (
                                     <Separator className="my-2" />
                                 )}
-                            </>
+                            </div>
                         ))}
                     </ScrollArea>
                 </PopoverContent>

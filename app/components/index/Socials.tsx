@@ -18,6 +18,7 @@ import {
     MailIcon,
 } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from '@components/popover'
+import { PopoverAnchor } from '@radix-ui/react-popover'
 
 interface Social {
     friendlyName: string
@@ -79,7 +80,6 @@ const SocialButton = ({ Icon, colour, url }: Omit<Social, 'friendlyName'>) => {
     return (
         <Button
             key={url}
-            asChild={!!url}
             variant="ghost"
             className="h-16 w-16 sm:h-20 sm:w-20"
             onMouseEnter={flipHoveringState}
@@ -145,7 +145,7 @@ const EmailPopover = ({
 export const Socials = () => (
     <div className="flex justify-center">
         {SOCIALS.map((social) => (
-            <>
+            <div key={social.friendlyName} className="flex flex-row">
                 <TooltipWrapper text={social.friendlyName}>
                     <SocialButton {...social} />
                 </TooltipWrapper>
@@ -153,7 +153,7 @@ export const Socials = () => (
                     className="mx-3 h-auto md:mx-8"
                     orientation="vertical"
                 />
-            </>
+            </div>
         ))}
         <EmailPopover email="erkin_salih@hotmail.com">
             <TooltipWrapper text="Email">

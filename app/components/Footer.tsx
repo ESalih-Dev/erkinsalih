@@ -1,7 +1,7 @@
 import { Link } from '@remix-run/react'
 
 export const Footer = () => (
-    <div className="relative bottom-4 w-auto space-x-2 text-center text-sm text-muted-foreground">
+    <div className="absolute bottom-4 left-1/2 w-auto w-full translate-x-[-50%] space-x-2 text-center text-sm text-muted-foreground">
         <span>😎</span>
         <Link
             to="https://github.com/ESalih-Dev/erkinsalih"
