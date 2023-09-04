@@ -23,16 +23,13 @@ export const EXPERIENCE: Record<JobID, CompanyInfo> = {
 }
 
 const Experience = () => {
+    const isMobileDevice = isMobile()
     const [hovering, setHovering] = useState<JobID | undefined>()
     const [experience, setExperience] = useState<JobID | undefined>()
 
     useEffect(() => {
-        if (isMobile()) setTimeout(() => setExperience('Xata'), 700)
+        if (isMobileDevice) setTimeout(() => setExperience('Xata'), 700)
     }, [])
-
-    useEffect(() => {
-        if (hovering) setHovering(undefined)
-    }, [experience])
 
     return (
         <div className="py-20">
@@ -45,13 +42,13 @@ const Experience = () => {
             >
                 My Experience
             </div>
-            <div className="space-y-2">
+            <div className="mb-2 space-y-2">
                 <Timeline
                     setHovering={setHovering}
                     experience={experience}
                     setExperience={setExperience}
                 />
-                <CompanyHint experience={hovering} />
+                {!isMobileDevice && <CompanyHint experience={hovering} />}
             </div>
             <CompanyExperience experience={experience} />
         </div>

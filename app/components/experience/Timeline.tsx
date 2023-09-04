@@ -5,7 +5,7 @@ import { Separator } from '@components/separator'
 import { Button } from '@components/button'
 
 const CircleStyles =
-    'min-w-[24px] hover:cursor-pointer transition-colors duration-300 hover:stroke-violet-600 hover:duration-500'
+    'w-6 hover:cursor-pointer transition-colors duration-300 hover:stroke-violet-600 hover:duration-500'
 const LineStyles = 'h-1 rounded-md transition-colors duration-300'
 
 interface Props {
@@ -50,7 +50,7 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
                                     ? 'bg-violet-800'
                                     : 'bg-white'
                             }`}
-                            style={{ width: `calc(${width}% - 24px)` }}
+                            style={{ width: `calc(${width}% - 1.5rem)` }}
                         />
                     </>
                 )
