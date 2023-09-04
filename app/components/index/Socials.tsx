@@ -81,7 +81,7 @@ const SocialButton = ({ Icon, colour, url }: Omit<Social, 'friendlyName'>) => {
             key={url}
             asChild={!!url}
             variant="ghost"
-            className="h-20 w-20"
+            className="h-16 w-16 sm:h-20 sm:w-20"
             onMouseEnter={flipHoveringState}
             onMouseLeave={flipHoveringState}
         >
@@ -150,7 +150,7 @@ export const Socials = () => (
                     <SocialButton {...social} />
                 </TooltipWrapper>
                 <Separator
-                    className="mx-4 h-auto md:mx-8"
+                    className="mx-3 h-auto md:mx-8"
                     orientation="vertical"
                 />
             </>

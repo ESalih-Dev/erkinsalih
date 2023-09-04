@@ -33,7 +33,7 @@ const VisitChecker = ({ countries }: Required<Props>) => {
     const handleSelect = (country: string) => setSelected(country)
 
     return (
-        <div className="flex items-center space-x-4">
+        <div className="flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
             <Popover
                 onOpenChange={(e) => {
                     if (!e) {
@@ -43,7 +43,7 @@ const VisitChecker = ({ countries }: Required<Props>) => {
                 }}
             >
                 <PopoverTrigger asChild>
-                    <Button variant="outline">
+                    <Button variant="outline" className="h-auto">
                         <Globe2 className="mr-1" /> Check if I've visited a
                         country!
                     </Button>
@@ -97,7 +97,7 @@ const VisitChecker = ({ countries }: Required<Props>) => {
 }
 
 export const LifeInsightsTravel = ({ countries }: Props) => (
-    <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-12 md:flex-row md:space-x-12 md:space-y-0">
+    <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-6 sm:p-12 md:flex-row md:space-x-12 md:space-y-0">
         <img
             className="h-min w-full rounded-md md:w-2/5"
             width={448}

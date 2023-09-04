@@ -28,24 +28,26 @@ export const ExperienceInfo = ({
 }: Omit<CompanyInfo, 'role' | 'description'>) => (
     <Card className="h-min">
         <CardHeader>
-            <CardTitle className="flex flex-row justify-between">
-                <div className="flex flex-row space-x-2">
-                    <img
-                        src={logoUrl}
-                        alt={`${companyName} logo`}
-                        className="h-6 w-6 rounded-sm"
-                    />
-                    <Link
-                        to={companyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="hover:underline hover:underline-offset-4"
-                    >
-                        {companyName}
-                    </Link>
+            <CardTitle className="flex flex-row items-start justify-between">
+                <div className="space-y-2">
+                    <div className="flex flex-row space-x-2">
+                        <img
+                            src={logoUrl}
+                            alt={`${companyName} logo`}
+                            className="h-6 w-6 rounded-sm"
+                        />
+                        <Link
+                            to={companyUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:underline hover:underline-offset-4"
+                        >
+                            {companyName}
+                        </Link>
+                    </div>
                     {team && (
                         <span className="text-lg text-muted-foreground">
-                            - {team}
+                            {team}
                         </span>
                     )}
                 </div>

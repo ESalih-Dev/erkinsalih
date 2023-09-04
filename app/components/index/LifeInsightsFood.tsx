@@ -6,7 +6,7 @@ const FOOD_IMG =
 
 export const LifeInsightsFood = () => {
     return (
-        <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-12 md:flex-row md:space-x-12 md:space-y-0">
+        <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-6 sm:p-12 md:flex-row md:space-x-12 md:space-y-0">
             <div className="whitespace-pre-wrap text-xl leading-9 text-muted-foreground md:w-1/2">
                 Sometimes I wonder whether I travel to see sights, enjoy new
                 experiences, meet people, live in different environments...or if

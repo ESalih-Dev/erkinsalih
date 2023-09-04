@@ -29,11 +29,12 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
                                     ? 'stroke-violet-800'
                                     : 'stroke-white'
                             }`}
-                            onClick={() =>
+                            onClick={() => {
                                 setExperience(
                                     experience === exp.id ? undefined : exp.id
                                 )
-                            }
+                                setHovering(undefined)
+                            }}
                             onMouseEnter={() => setHovering(exp.id)}
                             onMouseLeave={() => setHovering(undefined)}
                         />

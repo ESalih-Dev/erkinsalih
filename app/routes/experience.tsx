@@ -26,7 +26,7 @@ const Experience = () => {
     const [experience, setExperience] = useState<JobID | undefined>()
 
     return (
-        <div className="md:my-20">
+        <div className="my-14 md:my-20">
             <div
                 className={`pb-8 font-bold tracking-wider transition-all duration-1000 ease-in-out ${
                     experience

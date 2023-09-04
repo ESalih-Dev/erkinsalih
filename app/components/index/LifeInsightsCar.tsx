@@ -4,7 +4,7 @@ const CAR_IMG =
     'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/mwglr4mrbuseokztbb48'
 
 export const LifeInsightsCar = () => (
-    <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-12 md:flex-row md:space-x-12 md:space-y-0">
+    <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-6 sm:p-12 md:flex-row md:space-x-12 md:space-y-0">
         <img
             className="h-min w-full rounded-md md:w-2/5"
             width={448}
