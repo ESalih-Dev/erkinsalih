@@ -10,7 +10,7 @@ export const PageToggle = () => {
 
   return (
     <div
-      className={`fixed left-1/2 top-0 z-10 flex h-[60px] w-[300px] translate-x-[-50%] cursor-pointer items-center space-x-4 rounded-b-xl border-b-2 border-l-2 border-r-2 bg-slate-950 px-4 py-2 text-center hover:bg-slate-900 ${
+      className={`fixed left-1/2 top-0 z-10 flex h-[48px] translate-x-[-50%] cursor-pointer items-center space-x-4 rounded-b-xl border-b-2 border-l-2 border-r-2 bg-slate-950 px-4 py-2 text-center hover:bg-slate-900 sm:h-[60px] ${
         hovering ? 'border-violet-800' : ''
       }`}
       onMouseEnter={() => setHovering(true)}
@@ -18,7 +18,7 @@ export const PageToggle = () => {
       onClick={(_) => navigate(pathname === '/' ? '/experience' : '/')}
     >
       <span
-        className="w-[60px] text-center text-xl tracking-wider"
+        className="text-md text-center tracking-wider sm:text-xl"
         style={{
           opacity: hovering || isHome ? 1 : 0.3,
           ...{ ...(isHome && { fontWeight: 700 }) },
@@ -28,7 +28,7 @@ export const PageToggle = () => {
       </span>
       <Switch checked={!isHome} />
       <span
-        className="w-[120px] text-center text-xl tracking-wider"
+        className="text-md text-center tracking-wider sm:text-xl"
         style={{
           opacity: hovering || !isHome ? 1 : 0.3,
           ...{ ...(!isHome && { fontWeight: 700 }) },

@@ -51,7 +51,7 @@ const App = () => (
     </head>
     <body className="container relative min-h-screen">
       <PageToggle />
-      <div className="absolute right-8 mr-2 mt-4">
+      <div className="absolute right-4 mt-2 sm:right-8 sm:mr-2 sm:mt-4">
         <CodeSource />
       </div>
       <Outlet />
