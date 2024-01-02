@@ -9,23 +9,23 @@ import { Socials } from '~/components/index/Socials'
 import { fetchCountries } from '~/models/index/fetchCountries.server'
 
 export const loader = async () => {
-    const countries = await fetchCountries()
-    return json({ countries })
+  const countries = await fetchCountries()
+  return json({ countries })
 }
 
 const Index = () => {
-    const { countries } = useLoaderData<typeof loader>()
+  const { countries } = useLoaderData<typeof loader>()
 
-    return (
-        <div className="space-y-20 py-20">
-            <MainContent />
-            <Socials />
-            <LifeQuote />
-            <LifeInsightsTravel countries={countries} />
-            <LifeInsightsFood />
-            <LifeInsightsCar />
-        </div>
-    )
+  return (
+    <div className="space-y-20 py-20">
+      <MainContent />
+      <Socials />
+      <LifeQuote />
+      <LifeInsightsTravel countries={countries} />
+      <LifeInsightsFood />
+      <LifeInsightsCar />
+    </div>
+  )
 }
 
 export default Index

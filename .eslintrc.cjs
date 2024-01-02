@@ -3,22 +3,23 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["standard-with-typescript", "plugin:react/recommended", "prettier"],
+  extends: ['standard-with-typescript', 'plugin:react/recommended', 'prettier'],
   overrides: [
     {
       env: {
         node: true,
       },
-      files: [".eslintrc.{js,cjs}"],
+      files: ['.eslintrc.{js,cjs}'],
       parserOptions: {
-        sourceType: "script",
+        sourceType: 'script',
       },
+      indent: ['error', 4],
     },
   ],
   parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
-  plugins: ["react"],
+  plugins: ['react'],
   rules: {},
-};
+}

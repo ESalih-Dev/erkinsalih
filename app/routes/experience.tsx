@@ -14,45 +14,45 @@ import { isMobile } from '~/utils'
 
 // Job list starts from most-recent
 export const EXPERIENCE: Record<JobID, CompanyInfo> = {
-    Xata,
-    Coral,
-    MindfulChef,
-    AmazonPVWeb,
-    AmazonPVIOS,
-    PAConsulting,
+  Xata,
+  Coral,
+  MindfulChef,
+  AmazonPVWeb,
+  AmazonPVIOS,
+  PAConsulting,
 }
 
 const Experience = () => {
-    const isMobileDevice = isMobile()
-    const [hovering, setHovering] = useState<JobID | undefined>()
-    const [experience, setExperience] = useState<JobID | undefined>()
+  const isMobileDevice = isMobile()
+  const [hovering, setHovering] = useState<JobID | undefined>()
+  const [experience, setExperience] = useState<JobID | undefined>()
 
-    useEffect(() => {
-        if (isMobileDevice) setTimeout(() => setExperience('Xata'), 700)
-    }, [])
+  useEffect(() => {
+    if (isMobileDevice) setTimeout(() => setExperience('Xata'), 700)
+  }, [])
 
-    return (
-        <div className="py-20">
-            <div
-                className={`pb-8 font-bold tracking-wider transition-all duration-1000 ease-in-out ${
-                    experience
-                        ? 'pt-0 text-2xl text-white'
-                        : 'pt-[40vh] text-4xl text-slate-400'
-                }`}
-            >
-                My Experience
-            </div>
-            <div className="mb-2 space-y-2">
-                <Timeline
-                    setHovering={setHovering}
-                    experience={experience}
-                    setExperience={setExperience}
-                />
-                {!isMobileDevice && <CompanyHint experience={hovering} />}
-            </div>
-            <CompanyExperience experience={experience} />
-        </div>
-    )
+  return (
+    <div className="py-20">
+      <div
+        className={`pb-8 font-bold tracking-wider transition-all duration-1000 ease-in-out ${
+          experience
+            ? 'pt-0 text-2xl text-white'
+            : 'pt-[40vh] text-4xl text-slate-400'
+        }`}
+      >
+        My Experience
+      </div>
+      <div className="mb-2 space-y-2">
+        <Timeline
+          setHovering={setHovering}
+          experience={experience}
+          setExperience={setExperience}
+        />
+        {!isMobileDevice && <CompanyHint experience={hovering} />}
+      </div>
+      <CompanyExperience experience={experience} />
+    </div>
+  )
 }
 
 export default Experience

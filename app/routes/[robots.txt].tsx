@@ -5,11 +5,11 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: http://erkinsalih.com/sitemap.xml
+Sitemap: http://kin.codes/sitemap.xml
 `
 
 export const loader = async () =>
-    new Response(robotText, {
-        status: 200,
-        headers: { 'Content-Type': 'text/plain' },
-    })
+  new Response(robotText, {
+    status: 200,
+    headers: { 'Content-Type': 'text/plain' },
+  })
