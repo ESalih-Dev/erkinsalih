@@ -61,7 +61,7 @@ export const MainContent = () => (
     <div className="md:w-2/5">
       <img
         className="animate-unblur rounded-3xl"
-        src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_1000/yod23rsojjmnbz75vkir"
+        src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_1000/f3mntumy1nps7txo1wft"
         alt="Me on top of a mountain in Ha Giang (Vietnam)"
       />
     </div>
