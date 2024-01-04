@@ -22,29 +22,6 @@ const description = (
   </>
 )
 
-const chartData: DataPoint[] = [
-  {
-    name: 'Code Quality',
-    value: 5,
-  },
-  {
-    name: 'Engineer Skill',
-    value: 6,
-  },
-  {
-    name: 'Work/Life balance',
-    value: 8,
-  },
-  {
-    name: 'Freedom',
-    value: 3,
-  },
-  {
-    name: 'Happiness',
-    value: 3,
-  },
-]
-
 export const Xata: CompanyInfo = {
   id: 'Xata',
   logoUrl:
@@ -58,5 +35,4 @@ export const Xata: CompanyInfo = {
   linkedInUrl: 'https://www.linkedin.com/company/xataio/',
   technologies: ['TypeScript', 'React', 'NextJS', 'ChakraUI'],
   description,
-  chartData,
 }

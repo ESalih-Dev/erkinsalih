@@ -28,5 +28,4 @@ export interface CompanyInfo {
   linkedInUrl: string
   description: ReactNode
   technologies: Technology[]
-  chartData?: DataPoint[]
 }

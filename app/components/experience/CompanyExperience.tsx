@@ -4,7 +4,7 @@ import { EXPERIENCE } from '~/routes/experience'
 import { ExperienceInfo } from '~/components/experience/ExperienceInfo'
 import { ExperienceDescription } from '~/components/experience/ExperienceDescription'
 import { JobID } from '~/components/experience/ExperienceUtils'
-import { ExperienceChart } from '~/components/experience/ExperienceChart'
+
 interface Props {
   experience: JobID | undefined
 }
@@ -43,9 +43,6 @@ export const CompanyExperience = ({ experience }: Props) => {
       <div className="flex flex-col space-y-12 lg:flex-row lg:space-x-12 lg:space-y-0">
         <div className="lg:w-1/2">
           <ExperienceInfo {...experienceInfo} />
-          {experienceInfo.chartData && (
-            <ExperienceChart chartData={experienceInfo.chartData} />
-          )}
         </div>
         <div className="lg:w-1/2">
           <ExperienceDescription

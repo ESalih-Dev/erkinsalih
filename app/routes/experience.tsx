@@ -12,14 +12,13 @@ import { PAConsulting } from '~/components/experience/CompanyInfo/PAConsulting'
 import { Xata } from '~/components/experience/CompanyInfo/Xata'
 import { isMobile } from '~/utils'
 
-// Job list starts from most-recent
 export const EXPERIENCE: Record<JobID, CompanyInfo> = {
-  Xata,
-  Coral,
-  MindfulChef,
-  AmazonPVWeb,
-  AmazonPVIOS,
   PAConsulting,
+  AmazonPVIOS,
+  AmazonPVWeb,
+  MindfulChef,
+  Coral,
+  Xata,
 }
 
 const Experience = () => {
@@ -30,6 +29,24 @@ const Experience = () => {
   useEffect(() => {
     if (isMobileDevice) setTimeout(() => setExperience('Xata'), 700)
   }, [])
+
+  const handleKeyPress = (e: KeyboardEvent) => {
+    if (experience == undefined) return
+    const jobs = Object.keys(EXPERIENCE) as (keyof typeof EXPERIENCE)[]
+    const index = jobs.indexOf(experience)
+    if (e.key === 'ArrowLeft' && index > 0) {
+      setExperience(jobs[index - 1])
+    }
+    if (e.key === 'ArrowRight' && index < jobs.length - 1) {
+      setExperience(jobs[index + 1])
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyPress)
+
+    return () => document.removeEventListener('keydown', handleKeyPress)
+  })
 
   return (
     <div className="py-20">

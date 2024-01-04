@@ -22,29 +22,6 @@ const description = (
   </>
 )
 
-const chartData: DataPoint[] = [
-  {
-    name: 'Code Quality',
-    value: 6,
-  },
-  {
-    name: 'Engineer Skill',
-    value: 5,
-  },
-  {
-    name: 'Work/Life balance',
-    value: 10,
-  },
-  {
-    name: 'Freedom',
-    value: 8,
-  },
-  {
-    name: 'Happiness',
-    value: 8,
-  },
-]
-
 export const MindfulChef: CompanyInfo = {
   id: 'MindfulChef',
   logoUrl:
@@ -58,5 +35,4 @@ export const MindfulChef: CompanyInfo = {
   linkedInUrl: 'https://www.linkedin.com/company/mindful-chef/',
   technologies: ['TypeScript', 'JavaScript', 'NextJS', 'Redux'],
   description,
-  chartData,
 }

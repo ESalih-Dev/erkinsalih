@@ -52,29 +52,6 @@ const description = (
   </>
 )
 
-const chartData: DataPoint[] = [
-  {
-    name: 'Code Quality',
-    value: 10,
-  },
-  {
-    name: 'Engineer Skill',
-    value: 10,
-  },
-  {
-    name: 'Work/Life balance',
-    value: 3,
-  },
-  {
-    name: 'Freedom',
-    value: 7,
-  },
-  {
-    name: 'Happiness',
-    value: 6,
-  },
-]
-
 export const AmazonPVWeb: CompanyInfo = {
   id: 'AmazonPVWeb',
   logoUrl:
@@ -89,5 +66,4 @@ export const AmazonPVWeb: CompanyInfo = {
   linkedInUrl: 'https://www.linkedin.com/company/amazon/',
   technologies: ['Scala', 'Java', 'TypeScript', 'JavaScript', 'React'],
   description,
-  chartData,
 }
