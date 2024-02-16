@@ -59,7 +59,7 @@ export const AmazonPVWeb: CompanyInfo = {
   companyName: 'Amazon',
   companyUrl: 'https://www.amazon.co.uk/gp/video/storefront/',
   team: 'Prime Video Web',
-  companySize: '10,0001+',
+  companySize: '10,001+',
   role: 'Full Stack Engineer',
   tenure: 23,
   tenureDates: 'Oct 2019 - Sep 2021',

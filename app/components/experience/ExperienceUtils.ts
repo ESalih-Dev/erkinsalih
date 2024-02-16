@@ -14,7 +14,7 @@ export type CompanySize =
   | '501 - 1000'
   | '1001 - 5000'
   | '5001 - 10,000'
-  | '10,0001+'
+  | '10,001+'
 
 export const Language = [
   'TypeScript',

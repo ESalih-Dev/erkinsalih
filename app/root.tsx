@@ -1,4 +1,4 @@
-import type { LinksFunction, V2_MetaFunction } from '@remix-run/cloudflare'
+import type { LinksFunction, MetaFunction } from '@remix-run/cloudflare'
 import { cssBundleHref } from '@remix-run/css-bundle'
 import {
   Links,
@@ -9,11 +9,11 @@ import {
   Scripts,
   ScrollRestoration,
 } from '@remix-run/react'
-import styles from './globals.css'
+import styles from '~/globals.css'
 import { PageToggle } from '~/components/PageToggle'
 import { CodeSource } from '~/components/CodeSource'
 
-export const meta: V2_MetaFunction = () => [
+export const meta: MetaFunction = () => [
   { title: "It's Kin 🥶" },
   { name: 'description', content: 'Welcome to my website!' },
 ]

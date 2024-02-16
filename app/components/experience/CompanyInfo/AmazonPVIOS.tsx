@@ -29,7 +29,7 @@ export const AmazonPVIOS: CompanyInfo = {
   companyName: 'Amazon',
   companyUrl: 'https://apps.apple.com/us/app/amazon-prime-video/id545519333',
   team: 'Prime Video iOS',
-  companySize: '10,0001+',
+  companySize: '10,001+',
   role: 'Full Stack Engineer - Placement',
   tenure: 6,
   tenureDates: 'Apr 2018 - Sep 2018',
