@@ -5,7 +5,7 @@ import { useIntersectionObserver } from '~/hooks/useIntersectionObserver'
 import { cn } from '~/utils'
 
 const FOOD_IMG =
-  'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/vmcl58pzozn3m3ndxn3q'
+  'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,w_448/vmcl58pzozn3m3ndxn3q'
 
 export const LifeInsightsFood = () => {
   const ref = useRef<HTMLDivElement | null>(null)

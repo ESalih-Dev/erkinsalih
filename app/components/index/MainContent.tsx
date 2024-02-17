@@ -60,8 +60,8 @@ export const MainContent = () => (
     </div>
     <div className="lg:w-2/5">
       <img
-        className="animate-unblur rounded-3xl"
-        src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_1000/f3mntumy1nps7txo1wft"
+        className="max-h-[500px] max-w-[500px] animate-unblur rounded-3xl"
+        src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_500/f3mntumy1nps7txo1wft"
         alt="Me on top of a mountain in Ha Giang (Vietnam)"
       />
     </div>

@@ -12,7 +12,7 @@ import { CountryData } from '~/models/index/fetchCountries.server'
 import { cn } from '~/utils'
 
 const SKIING_IMG =
-  'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/ld3geyjcp23lqohxt4ci'
+  'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,w_448/ld3geyjcp23lqohxt4ci'
 
 interface Props {
   countries?: CountryData
