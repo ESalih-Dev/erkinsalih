@@ -1,13 +1,29 @@
 import { Card } from '@components/card'
 import { Link } from '@remix-run/react'
+import { useRef } from 'react'
+import { useIntersectionObserver } from '~/hooks/useIntersectionObserver'
+import { cn } from '~/utils'
 
 const FOOD_IMG =
   'https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto/vmcl58pzozn3m3ndxn3q'
 
 export const LifeInsightsFood = () => {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const entry = useIntersectionObserver(ref, {
+    freezeOnceVisible: true,
+    rootMargin: '-10%',
+  })
+  const isVisible = !!entry?.isIntersecting
+
   return (
-    <Card className="flex flex-col justify-between space-y-6 border-none bg-slate-900 p-6 sm:p-12 md:flex-row md:space-x-12 md:space-y-0">
-      <div className="whitespace-pre-wrap text-xl leading-9 text-muted-foreground md:w-1/2">
+    <Card
+      ref={ref}
+      className={cn(
+        'flex flex-col justify-between space-y-6 border-none bg-slate-900 p-6 transition-all duration-700 sm:p-12 lg:flex-row lg:space-x-12 lg:space-y-0',
+        isVisible ? 'opacity-100' : 'translate-y-20 opacity-0'
+      )}
+    >
+      <div className="whitespace-pre-wrap text-xl leading-9 text-muted-foreground lg:w-1/2">
         Sometimes I wonder whether I travel to see sights, enjoy new
         experiences, meet people, live in different environments...or if I'm
         just travelling to eat my way around the world 😄 {`\n`}
@@ -46,7 +62,7 @@ export const LifeInsightsFood = () => {
         near Holborn.
       </div>
       <img
-        className="h-min w-full rounded-md md:w-2/5"
+        className="h-min w-full rounded-md lg:w-2/5"
         width={448}
         height={560}
         src={FOOD_IMG}

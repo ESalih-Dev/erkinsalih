@@ -15,7 +15,11 @@ export const PageToggle = () => {
       }`}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
-      onClick={(_) => navigate(pathname === '/' ? '/experience' : '/')}
+      onClick={(_) =>
+        navigate(pathname === '/' ? '/experience' : '/', {
+          unstable_viewTransition: true,
+        })
+      }
     >
       <span
         className="text-md text-center tracking-wider sm:text-xl"

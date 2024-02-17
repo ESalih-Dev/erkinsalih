@@ -50,13 +50,13 @@ const App = () => (
       <Links />
     </head>
     <body className="container relative min-h-screen">
+      <PrefetchPageLinks page="/" />
+      <PrefetchPageLinks page="/experience" />
       <PageToggle />
       <div className="absolute right-4 mt-2 sm:right-8 sm:mr-2 sm:mt-4">
         <CodeSource />
       </div>
       <Outlet />
-      <PrefetchPageLinks page="/" />
-      <PrefetchPageLinks page="/experience" />
       <ScrollRestoration />
       <Scripts />
       <LiveReload />

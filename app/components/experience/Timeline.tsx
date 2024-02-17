@@ -3,6 +3,7 @@ import { EXPERIENCE } from '~/routes/experience'
 import { JobID } from '~/components/experience/ExperienceUtils'
 import { Separator } from '@components/separator'
 import { Button } from '@components/button'
+import { Fragment } from 'react'
 
 const CircleStyles =
   'w-6 hover:cursor-pointer transition-colors duration-300 hover:stroke-violet-600 hover:duration-500'
@@ -23,7 +24,7 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
       {jobs.map((job) => {
         const width = Math.round((job.tenure / totalTenure) * 100)
         return (
-          <>
+          <Fragment key={job.id}>
             <Button
               className="p-0 hover:bg-transparent"
               variant="ghost"
@@ -45,7 +46,7 @@ export const Timeline = ({ setHovering, experience, setExperience }: Props) => {
               }`}
               style={{ width: `calc(${width}% - 1.5rem)` }}
             />
-          </>
+          </Fragment>
         )
       })}
     </div>
