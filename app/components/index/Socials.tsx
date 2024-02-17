@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 import { Popover, PopoverContent, PopoverTrigger } from '@components/popover'
 import { PopoverAnchor } from '@radix-ui/react-popover'
+import { ClientOnly } from '~/components/ClientOnly'
 
 interface Social {
   friendlyName: string
@@ -78,10 +79,9 @@ const SocialButton = ({ Icon, colour, url }: Omit<Social, 'friendlyName'>) => {
   )
 
   return (
-    <Button
+    <div
       key={url}
-      variant="ghost"
-      className="h-16 w-16 sm:h-20 sm:w-20"
+      className="flex items-center justify-center"
       onMouseEnter={flipHoveringState}
       onMouseLeave={flipHoveringState}
     >
@@ -92,7 +92,7 @@ const SocialButton = ({ Icon, colour, url }: Omit<Social, 'friendlyName'>) => {
       ) : (
         iconComponent
       )}
-    </Button>
+    </div>
   )
 }
 
@@ -120,7 +120,12 @@ const EmailPopover = ({
       <PopoverTrigger>{children}</PopoverTrigger>
       <PopoverContent
         className="w-fit"
-        onCloseAutoFocus={() => setCopied(false)}
+        onOpenAutoFocus={(event) => {
+          event.preventDefault()
+        }}
+        onCloseAutoFocus={() => {
+          setCopied(false)
+        }}
       >
         <div className="flex flex-row align-middle">
           <div id="email" className="mr-6">
@@ -153,9 +158,13 @@ export const Socials = () => (
       </div>
     ))}
     <EmailPopover email="erkin_salih@hotmail.com">
-      <TooltipWrapper text="Email">
-        <SocialButton Icon={MailIcon} colour="#FFC629" />
-      </TooltipWrapper>
+      <ClientOnly>
+        {() => (
+          <TooltipWrapper text="Email">
+            <SocialButton Icon={MailIcon} colour="#FFC629" />
+          </TooltipWrapper>
+        )}
+      </ClientOnly>
     </EmailPopover>
   </div>
 )

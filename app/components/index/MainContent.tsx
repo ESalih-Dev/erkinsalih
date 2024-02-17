@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Button } from '@components/button'
 import { Card, CardDescription } from '@components/card'
 import { FACTS } from '~/components/index/Facts'
+import { ClientOnly } from '~/components/ClientOnly'
 
 const getFactNumber = (prev?: number): number => {
   const getPosition = () => Math.floor(Math.random() * FACTS.length)
@@ -55,8 +56,7 @@ export const MainContent = () => (
       <div className="relative mb-16 animate-fade-up text-4xl font-bold tracking-wider">
         Front-end engineer with a passion for travelling and eating
       </div>
-
-      <RandomFactGenerator />
+      <ClientOnly>{() => <RandomFactGenerator />}</ClientOnly>
     </div>
     <div className="lg:w-2/5">
       <img
