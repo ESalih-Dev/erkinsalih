@@ -48,8 +48,8 @@ const RandomFactGenerator = () => {
 }
 
 export const MainContent = () => (
-  <div className="flex flex-col justify-between lg:flex-row">
-    <div className="mb-20 lg:my-20 lg:w-1/2">
+  <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between">
+    <div className="mb-20 lg:mb-0 lg:mt-12 lg:w-1/2 xl:mt-20">
       <div className="relative mb-4 animate-fade-up text-xl font-light">
         Hi, i'm kin 🙂
       </div>
@@ -58,10 +58,10 @@ export const MainContent = () => (
       </div>
       <ClientOnly>{() => <RandomFactGenerator />}</ClientOnly>
     </div>
-    <div className="lg:w-2/5">
+    <div className="md:w-5/6 lg:w-2/5">
       <img
-        className="max-h-[500px] max-w-[500px] animate-unblur rounded-3xl"
-        src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_500/f3mntumy1nps7txo1wft"
+        className="animate-unblur rounded-3xl"
+        src="https://res.cloudinary.com/erkinsalih/image/upload/f_auto,q_auto,ar_1.0,c_fill,w_576/f3mntumy1nps7txo1wft"
         alt="Me on top of a mountain in Ha Giang (Vietnam)"
       />
     </div>

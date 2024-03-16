@@ -1,8 +1,8 @@
-export default {
+module.exports = {
   trailingComma: 'es5',
   tabWidth: 2,
   semi: false,
   singleQuote: true,
-  tailwindConfig: './tailwind.config.js',
+  tailwindConfig: './tailwind.config.ts',
   plugins: ['prettier-plugin-tailwindcss'],
 }
