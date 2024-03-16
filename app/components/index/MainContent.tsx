@@ -50,12 +50,12 @@ const RandomFactGenerator = () => {
 export const MainContent = () => (
   <div className="flex flex-col items-center lg:flex-row lg:items-start lg:justify-between">
     <div className="mb-20 lg:mb-0 lg:mt-12 lg:w-1/2 xl:mt-20">
-      <div className="relative mb-4 animate-fade-up text-xl font-light">
+      <h1 className="relative mb-4 animate-fade-up text-xl font-light">
         Hi, i'm kin 🙂
-      </div>
-      <div className="relative mb-16 animate-fade-up text-4xl font-bold tracking-wider">
+      </h1>
+      <h2 className="relative mb-16 animate-fade-up text-4xl font-bold tracking-wider">
         Front-end engineer with a passion for travelling and eating
-      </div>
+      </h2>
       <ClientOnly>{() => <RandomFactGenerator />}</ClientOnly>
     </div>
     <div className="md:w-5/6 lg:w-2/5">

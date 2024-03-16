@@ -11,6 +11,7 @@ import { MindfulChef } from '~/components/experience/CompanyInfo/MindfulChef'
 import { PAConsulting } from '~/components/experience/CompanyInfo/PAConsulting'
 import { Xata } from '~/components/experience/CompanyInfo/Xata'
 import { isMobile } from '~/utils'
+import { MetaFunction } from '@remix-run/cloudflare'
 
 export const EXPERIENCE: Record<JobID, CompanyInfo> = {
   PAConsulting,
@@ -19,6 +20,17 @@ export const EXPERIENCE: Record<JobID, CompanyInfo> = {
   MindfulChef,
   Coral,
   Xata,
+}
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "It's Kin, you found me 🔥" },
+    {
+      name: 'description',
+      content:
+        'Look back in history at my experience working at Amazon, Mindful Chef, Coral & Xata',
+    },
+  ]
 }
 
 const Experience = () => {

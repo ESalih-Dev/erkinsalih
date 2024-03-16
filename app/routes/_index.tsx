@@ -1,4 +1,4 @@
-import { json } from '@remix-run/cloudflare'
+import { MetaFunction, json } from '@remix-run/cloudflare'
 import { useLoaderData } from '@remix-run/react'
 import { LifeInsightsCar } from '~/components/index/LifeInsightsCar'
 import { LifeInsightsFood } from '~/components/index/LifeInsightsFood'
@@ -11,6 +11,17 @@ import { fetchCountries } from '~/models/index/fetchCountries.server'
 export const loader = async () => {
   const countries = await fetchCountries()
   return json({ countries })
+}
+
+export const meta: MetaFunction = () => {
+  return [
+    { title: "It's Kin, you found me 🔥" },
+    {
+      name: 'description',
+      content:
+        "Hey, I'm Kin! A front-end developer putting pretty boxes on websites.",
+    },
+  ]
 }
 
 const Index = () => {
