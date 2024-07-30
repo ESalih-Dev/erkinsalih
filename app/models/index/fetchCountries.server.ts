@@ -1,11 +1,13 @@
 import { z } from 'zod'
 
 const VISITED_COUNTRIES = [
+  'Albania',
   'Australia',
   'Cyprus',
   'France',
   'Greece',
   'Hungary',
+  'Indonesia',
   'Italy',
   'Japan',
   'Laos',
@@ -13,6 +15,7 @@ const VISITED_COUNTRIES = [
   'Monaco',
   'Morocco',
   'Netherlands',
+  'Philippines',
   'Portugal',
   'Saint Lucia',
   'Singapore',
