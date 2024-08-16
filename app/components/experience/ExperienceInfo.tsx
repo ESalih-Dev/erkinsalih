@@ -8,13 +8,13 @@ import {
 } from '@components/card'
 import { Linkedin } from 'lucide-react'
 import { TechnologyBadge } from '~/components/experience/TechnologyBadge'
-import { CompanyInfo } from '~/components/experience/CompanyInfo/CompanyInfo'
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from '@components/tooltip'
+import { CompanyInfo } from './CompanyInfo/index.types'
 
 export const ExperienceInfo = ({
   logoUrl,

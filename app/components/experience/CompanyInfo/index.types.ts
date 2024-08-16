@@ -5,16 +5,6 @@ import {
   Technology,
 } from '~/components/experience/ExperienceUtils'
 
-export type DataPoint = {
-  name:
-    | 'Code Quality'
-    | 'Engineer Skill'
-    | 'Work/Life balance'
-    | 'Freedom'
-    | 'Happiness'
-  value: number
-}
-
 export interface CompanyInfo {
   id: JobID
   logoUrl: string

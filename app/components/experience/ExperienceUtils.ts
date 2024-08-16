@@ -3,8 +3,9 @@ export type JobID =
   | 'AmazonPVIOS'
   | 'AmazonPVWeb'
   | 'MindfulChef'
-  | 'Coral'
+  | 'Arcane'
   | 'Xata'
+  | 'Cytora'
 
 export type CompanySize =
   | '1 - 10'

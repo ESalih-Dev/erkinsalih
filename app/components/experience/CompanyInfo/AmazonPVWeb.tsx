@@ -1,8 +1,5 @@
 import { Link } from '@remix-run/react'
-import {
-  CompanyInfo,
-  DataPoint,
-} from '~/components/experience/CompanyInfo/CompanyInfo'
+import { CompanyInfo } from './index.types'
 
 const description = (
   <>

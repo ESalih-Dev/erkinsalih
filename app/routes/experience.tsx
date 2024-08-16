@@ -1,25 +1,30 @@
 import { useEffect, useState } from 'react'
+import { MetaFunction } from '@remix-run/cloudflare'
 import { CompanyExperience } from '~/components/experience/CompanyExperience'
 import { CompanyHint } from '~/components/experience/CompanyHint'
 import { JobID } from '~/components/experience/ExperienceUtils'
 import { Timeline } from '~/components/experience/Timeline'
-import { AmazonPVIOS } from '~/components/experience/CompanyInfo/AmazonPVIOS'
-import { AmazonPVWeb } from '~/components/experience/CompanyInfo/AmazonPVWeb'
-import { CompanyInfo } from '~/components/experience/CompanyInfo/CompanyInfo'
-import { Coral } from '~/components/experience/CompanyInfo/Coral'
-import { MindfulChef } from '~/components/experience/CompanyInfo/MindfulChef'
-import { PAConsulting } from '~/components/experience/CompanyInfo/PAConsulting'
-import { Xata } from '~/components/experience/CompanyInfo/Xata'
+import {
+  PAConsulting,
+  AmazonPVIOS,
+  AmazonPVWeb,
+  MindfulChef,
+  Arcane,
+  Xata,
+  Cytora,
+} from '~/components/experience/CompanyInfo/index'
+import { CompanyInfo } from '~/components/experience/CompanyInfo/index.types'
+
 import { isMobile } from '~/utils'
-import { MetaFunction } from '@remix-run/cloudflare'
 
 export const EXPERIENCE: Record<JobID, CompanyInfo> = {
   PAConsulting,
   AmazonPVIOS,
   AmazonPVWeb,
   MindfulChef,
-  Coral,
+  Arcane,
   Xata,
+  Cytora,
 }
 
 export const meta: MetaFunction = () => {
@@ -28,7 +33,7 @@ export const meta: MetaFunction = () => {
     {
       name: 'description',
       content:
-        'Look back in history at my experience working at Amazon, Mindful Chef, Coral & Xata',
+        'Look back in history at my experience working at Amazon, Mindful Chef, Arcane & Xata',
     },
   ]
 }
